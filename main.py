@@ -1,18 +1,24 @@
-from scapy.all import sniff, IP, TCP, UDP, ICMP
+from scapy.all import sniff, IP, TCP, UDP, ICMP, DNS, DNSQR
 import datetime
 
 # Counters
 tcp_count = 0
 udp_count = 0
 icmp_count = 0
+dns_count = 0
 
 def packet_callback(packet):
-    global tcp_count, udp_count, icmp_count
-    
+    global tcp_count, udp_count, icmp_count, dns_count
+
     if IP in packet:
         src_ip = packet[IP].src
         dst_ip = packet[IP].dst
         time = datetime.datetime.now().strftime("%H:%M:%S")
+        
+        if DNS in packet and DNSQR in packet:
+           dns_count += 1
+           domain = packet[DNSQR].qname.decode()
+           print(f"[{time}] DNS | {src_ip} -> looking up -> {domain}")
 
         if TCP in packet:
             tcp_count += 1
@@ -36,6 +42,7 @@ def print_summary():
     print(f"UDP packets  : {udp_count}")
     print(f"ICMP packets : {icmp_count}")
     print(f"Total        : {tcp_count + udp_count + icmp_count}")
+    print(f"DNS queries  : {dns_count}")
 
 print("Starting packet capture... (Press Ctrl+C to stop)")
 try:
