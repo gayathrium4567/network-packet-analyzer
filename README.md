@@ -42,21 +42,22 @@ py main.py
 | Port Scan | Flags if single IP scans more than 10 ports |
 | SYN Flood | Flags if single IP sends more than 20 SYN packets |
 
-## Sample Output 
+## Sample Output
+
 ```
 ========================================
-NETWORK PACKET ANALYZER
-Author: Gayathri U M
-Press Ctrl+C to stop 
-
+   NETWORK PACKET ANALYZER
+   Author: Gayathri U M
+   Press Ctrl+C to stop
+========================================
 [16:13:44] TCP  | 192.168.1.5:30502 -> 34.149.66.154:443
 [16:13:45] DNS  | 192.168.1.5 -> looking up -> github.com.
 [16:13:46] *** ALERT: PORT SCAN detected from 192.168.1.6 - scanned 11 ports!
 [16:13:46] *** ALERT: SYN FLOOD detected from 192.168.1.6 - 21 SYN packets!
 ```
 ## Author
-```
+
 Gayathri U M
 B.Tech Electronics and Communication Engineering
 Government Engineering College, Thrissur
-```
+
