@@ -57,7 +57,8 @@ py main.py
 ```
 ## Author
 
-Gayathri U M
-B.Tech Electronics and Communication Engineering
-Government Engineering College, Thrissur
+**Gayathri U M**
 
+B.Tech Electronics and Communication Engineering
+
+Government Engineering College, Thrissurg
