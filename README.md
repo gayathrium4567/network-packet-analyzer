@@ -61,4 +61,4 @@ py main.py
 
 B.Tech Electronics and Communication Engineering
 
-Government Engineering College, Thrissurg
+Government Engineering College, Thrissur
