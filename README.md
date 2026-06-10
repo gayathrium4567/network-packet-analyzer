@@ -55,6 +55,15 @@ py main.py
 [16:13:46] *** ALERT: PORT SCAN detected from 192.168.1.6 - scanned 11 ports!
 [16:13:46] *** ALERT: SYN FLOOD detected from 192.168.1.6 - 21 SYN packets!
 ```
+
+## Validation & Cross-Verification
+
+Live attack simulation using Nmap from an Android device on the same network.
+Both Scapy analyzer and Wireshark independently confirmed all detections.
+
+📄 [View Full Validation Report](docs/validation_report.pdf)
+
+
 ## Author
 
 **Gayathri U M**  
